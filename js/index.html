@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome -->
+    <!-- Font awesome permite manter consistência visual em todos os projetos, fazendo com que os icones tenham aparencias coesas -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--defer faz com que os arquivos carreguem após o html-->
+    <script src="js/scripts.js" defer></script> 
+</head>
+<body>
+    <!-- primeiro criar estrutura html, css e dps as funcionalidades do js -->
+    <div class="todo-container">
+        <header>
+            <h1>Projeto To Do</h1>
+        </header>
+        <form id="todo-form">
+            <p>Adicione uma tarefa:</p>
+            <div class="form-control">
+                <!-- caixa de dialogo -->
+                <input type="text" id="todo-input" placeholder="O que você vai fazer?">
+                <!-- botão da caixa de dialogo -->
+                <button type="submit">
+                    <i class="fas fa-plus"></i>
+                </button>
+            </div>
+        </form>
+        <!-- caixa de dialogo -->
+        <form id="edit-form">
+            <p>Edite sua tarefa:</p>
+            <div class="form-control">
+                <input type="text" id="edit-input">
+                <button type="submit">
+                    <i class="fas fa-check"></i>
+                </button>
+            </div>
+            <button id="cancel-edit-btn">Cancelar</button>
+        </form>
+        <div id="toolbar">
+            <div id="serch">
+                <h4>Pesquisar:</h4>
+                <form>
+                    <input type="text" id="search-input" placeholder="Buscar">
+                    <button id="erase-button">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </form>
+            </div>
+            <div id="filter">
+                <h4>Filtrar:</h4>
+                <select id="filter-select">
+                    <option value="all">Todos</option>
+                    <option value="done">Feitas</option>
+                    <option value="todo">A fazer</option>
+                </select>
+            </div>
+        </div>
+        <div id="todo-list">
+            <div class="todo">
+                <h3>fazer tarefas</h3>
+                <button class="finish-todo">
+                    <i class="fas fa-check"></i>
+                </button>
+                <button class="edit-todo">
+                    <i class="fas fa-pencil-alt"></i>
+                </button>
+                <button class="remove-todo">
+                    <i class="fas fa-times"></i>
+                </button> 
+            </div>
+            <div id="todo-list">
+                <div class="todo">
+                    <h3>fazer tarefas</h3>
+                    <button class="finish-todo">
+                        <i class="fas fa-check"></i>
+                    </button>
+                    <button class="edit-todo">
+                        <i class="fas fa-pencil-alt"></i>
+                    </button>
+                    <button class="remove-todo">
+                        <i class="fas fa-times"></i>
+                    </button> 
+                </div>
+        </div>
+    </div>
+</body>
+</html> 
